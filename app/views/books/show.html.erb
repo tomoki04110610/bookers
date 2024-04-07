@@ -2,4 +2,4 @@
 <p><%= @book.title %></p>
 <storong>Body:</storong>
 <p><%= @book.body %></p>
-<a href="">Edit</a>|<a href="/books">Back</a>
+<%= link_to "Edit", edit_book_path(@book.id) %>|<a href="books">Back</a>
