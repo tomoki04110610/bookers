@@ -1,4 +1,4 @@
-<div>
+<div class="flash">
     <%= flash[:notice] %>
 </div>
 
@@ -35,14 +35,19 @@
     </ul>
 <% end %>
 
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
-    <h4>title</h4>
-    <%= f.text_field :title %>
+<div class="input">
+    <%= form_with model: @book, url: '/books', method: :post do |f| %>
+      <div>
+        <h4>title</h4>
+        <%= f.text_field :title %>
+      </div>
 
-    <h4>body</h4>
-    <%= f.text_area :body %>
+      <div>
+        <h4>body</h4>
+        <%= f.text_area :body %>
+      </div>
 
-    <%= f.submit 'Create Book' %>
-
+        <%= f.submit 'Create Book' %>
+</div>
 <% end %>
 
